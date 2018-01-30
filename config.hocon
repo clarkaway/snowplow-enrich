@@ -103,13 +103,13 @@ enrich {
       host = "{{nsqHost}}"
 
       # TCP port for nsqd, 4150 by default
-      port = {{nsqdPort}}
+      port = 4150
 
       # Host name for lookupd
       lookupHost = "{{lookupHost}}"
 
       # HTTP port for nsqlookupd, 4161 by default
-      lookupPort = {{nsqlookupdPort}}
+      lookupPort = 4161
     }
 
     # After enrichment, events are accumulated in a buffer before being sent to Kinesis/Kafka.
