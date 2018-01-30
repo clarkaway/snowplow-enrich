@@ -12,6 +12,16 @@
             "uri": "http://iglucentral.com"
           }
         }
+      },
+      {
+        "name": "Cru's Iglu Repo",
+        "priority": 1,
+        "vendorPrefixes": [ "org.cru" ],
+        "connection": {
+          "http": {
+            "uri": "http://cru-iglu.s3-website-us-east-1.amazonaws.com"
+          }
+        }
       }
     ]
   }
