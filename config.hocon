@@ -92,6 +92,26 @@ enrich {
       retries = 0
     }
 
+    # config for nsq
+    nsq {
+      # Channel name for nsq source
+      # If more than one application is reading from the same NSQ topic at the same time,
+      # all of them must have the same channel name
+      rawChannel = "{{nsqSourceChannelName}}"
+
+      # Host name for nsqd
+      host = "{{nsqHost}}"
+
+      # TCP port for nsqd, 4150 by default
+      port = {{nsqdPort}}
+
+      # Host name for lookupd
+      lookupHost = "{{lookupHost}}"
+
+      # HTTP port for nsqlookupd, 4161 by default
+      lookupPort = {{nsqlookupdPort}}
+    }
+
     # After enrichment, events are accumulated in a buffer before being sent to Kinesis/Kafka.
     # The buffer is emptied whenever:
     # - the number of stored records reaches recordLimit or
